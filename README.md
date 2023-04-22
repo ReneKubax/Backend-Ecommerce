@@ -4,10 +4,6 @@
 
 Build locally:
 
-```
-
-## Running Locally
-
 **1. Clone Repo**
 
 ```bash
