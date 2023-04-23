@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Apis Ecommerce",
+    "dateExported": "2023-04-23T05:18:45.037Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ce1a6179-cc5d-4847-bfc1-cdf9c3801fff",
+            "colId": "87bb1849-01ef-4b68-898c-d497d44eb50e",
+            "containerId": "",
+            "name": "GET Products",
+            "url": "http://localhost:3000/api/v1/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-23T05:09:02.641Z",
+            "modified": "2023-04-23T05:12:42.879Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fc367d39-f3a3-4226-a765-2c2d8267742b",
+            "colId": "87bb1849-01ef-4b68-898c-d497d44eb50e",
+            "containerId": "",
+            "name": "Create Product",
+            "url": "http://localhost:3000/api/v1/products",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-23T05:10:07.398Z",
+            "modified": "2023-04-23T05:12:58.860Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"CamisaNueva\",\n  \"price\": 1221,\n  \"image\": \"https://loremflickr.com/640/480\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea19721c-6ea3-401d-875c-341c67325ce9",
+            "colId": "87bb1849-01ef-4b68-898c-d497d44eb50e",
+            "containerId": "",
+            "name": "Update partial product",
+            "url": "http://localhost:3000/api/v1/products/f305b0dc-332a-4597-83df-e780b39ea063",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-23T05:16:25.059Z",
+            "modified": "2023-04-23T05:17:06.732Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"price\": 4000\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
