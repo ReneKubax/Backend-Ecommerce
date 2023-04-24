@@ -5,15 +5,15 @@ const routerApi = require('./routes');
 const {logErrors, errorHandler, boomErrorHandler} = require('./middlewares/error.handler')
 
 const app = express();
-const port = process.env.PORT ||3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const whiteList = ['http://localhost:8080', 'https://backend-ecommerce-production-0f53.up.railway.app', 'backend-ecommerce-production-0f53.up.railway.app'];
+const whiteList = ['http://localhost:8080', 'https://backend-ecommerce-production-0f53.up.railway.app', 'https://backend-ecommerce-production-0f53.up.railway.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (whiteList.indexOf(origin) !== -1) {
+    if (whiteList.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
@@ -22,6 +22,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
 
 app.get('/', (req, res) => {
   res.send('Hola mi server en express');
