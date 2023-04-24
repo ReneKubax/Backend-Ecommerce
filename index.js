@@ -9,7 +9,7 @@ const port = process.env.PORT ||3000;
 
 app.use(express.json());
 
-const whiteList = ['http://localhost:8080', 'https://backend-ecommerce-production-0f53.up.railway.app'];
+const whiteList = ['http://localhost:8080', 'https://backend-ecommerce-production-0f53.up.railway.app', 'backend-ecommerce-production-0f53.up.railway.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
