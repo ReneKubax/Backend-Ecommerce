@@ -1,16 +1,33 @@
-const boom = require('@hapi/boom')
-const getConnection=require('../libs/postgres');
+const boom = require('@hapi/boom');
 
-class UserService{constructor(){}
+const { models } = require('./../libs/sequelize');
 
-async create(data){return data;}
+class UserService {
+  constructor() {}
 
-async find(){const client=await getConnection();const rta=await client.query('SELECT * FROM task');return rta.rows;}
+  async create(data) {
+    return data;
+  }
 
-async findOne(id){return{id};}
+  async find() {
+    const rta = await models.User.findAll();
+    return rta;
+  }
 
-async update(id,changes){return{id,changes,};}
+  async findOne(id) {
+    return { id };
+  }
 
-async delete(id){return{id};}}
+  async update(id, changes) {
+    return {
+      id,
+      changes,
+    };
+  }
 
-module.exports=UserService;
+  async delete(id) {
+    return { id };
+  }
+}
+
+module.exports = UserService;
