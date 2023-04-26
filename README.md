@@ -25,4 +25,12 @@ npm run dev
 
 **4. Use It**
 
-You should be able to start working the data of the backend.
+You should be able to start working the backend.
+
+Build locally Docker with Postgres:
+
+**5. Run Docker Container**
+
+```bash
+docker-compose up
+```
